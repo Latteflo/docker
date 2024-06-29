@@ -266,7 +266,7 @@ docker-compose down
 - **Official Documentation**: [Docker Docs](https://docs.docker.com)
 - **Docker Hub**: [Docker Hub](https://hub.docker.com)
 - **Tutorials**: [Docker Getting Started](https://www.docker.com/get-started)
-- Docker Crash Course: [TechWorld](https://www.youtube.com/watch?v=pg19Z8LL06w)
+- **Docker Crash Course**: [TechWorld](https://www.youtube.com/watch?v=pg19Z8LL06w)
 
 ### 10. Docker Registries
 
