@@ -86,3 +86,6 @@ This combination is particularly powerful for use cases such as:
 - Security information and event management (SIEM)
 - Business analytics and data exploration
 
+Resource:
+
+- https://logz.io/learn/complete-guide-elk-stack/#what-elk-stack 
