@@ -1,5 +1,54 @@
 # Docker
 
+This repository contains notes and resources on Docker colected along my learning journey.
+
+---
+
+Contents:
+
+- [Docker](#docker)
+    - [1. Introduction to Docker](#1-introduction-to-docker)
+      - [What is Docker?](#what-is-docker)
+      - [Why Use Docker?](#why-use-docker)
+    - [2. Docker Architecture](#2-docker-architecture)
+      - [Key Components:](#key-components)
+    - [3. Basic Docker Commands](#3-basic-docker-commands)
+      - [Pulling an Image](#pulling-an-image)
+      - [Running a Container](#running-a-container)
+      - [Listing Containers](#listing-containers)
+      - [Stopping and Removing Containers](#stopping-and-removing-containers)
+    - [4. Building Docker Images](#4-building-docker-images)
+      - [Dockerfile Basics](#dockerfile-basics)
+      - [Building an Image](#building-an-image)
+      - [Running Your Image](#running-your-image)
+    - [5. Docker Volumes](#5-docker-volumes)
+      - [What are Volumes?](#what-are-volumes)
+      - [Creating a Volume](#creating-a-volume)
+      - [Using a Volume](#using-a-volume)
+    - [6. Docker Networking](#6-docker-networking)
+      - [Types of Networks](#types-of-networks)
+      - [Creating a Network](#creating-a-network)
+      - [Connecting a Container to a Network](#connecting-a-container-to-a-network)
+    - [7. Docker Compose](#7-docker-compose)
+      - [What is Docker Compose?](#what-is-docker-compose)
+      - [Example `docker-compose.yml`:](#example-docker-composeyml)
+      - [Running Docker Compose](#running-docker-compose)
+    - [8. Best Practices](#8-best-practices)
+    - [9. Useful Resources](#9-useful-resources)
+    - [10. Docker Registries](#10-docker-registries)
+    - [Summary](#summary)
+
+---
+
+Repository Structure:
+
+- Simple Demo : Contains a simple Node.js application and a Dockerfile to build a Docker image.
+- Python Demo: Contains a simple Python application and a Dockerfile to build a Docker image.
+- Monitoring Demo with Prometheus and Grafana: Contains a `docker-compose.yml` file to run the application with Prometheus and Grafana.
+- ElasticSearch Demo with Kibana and Logstash : Contains a `docker-compose.yml` file to run the application with ElasticSearch, Kibana and Logstash.
+
+---
+
 ### 1. Introduction to Docker
 
 #### What is Docker?
@@ -11,7 +60,6 @@ The difference between a **container** and an **image** is that an image is a bl
 A running instance of an image is called a container.
 An image is a blueprint for a container.
 We can run multiple containers from the same image.
-
 
 #### Why Use Docker?
 
@@ -33,7 +81,6 @@ We can run multiple containers from the same image.
 
 ---
 
-
 ### 3. Basic Docker Commands
 
 #### Pulling an Image
@@ -53,6 +100,7 @@ Starts a new container from an image.
 ```bash
 docker run <image_name>
 ```
+
 Example: `docker run ubuntu`
 
 -or we can run a container in detached mode
@@ -60,6 +108,7 @@ Example: `docker run ubuntu`
 ```bash
 docker run -d <image_name>
 ```
+
 In detached mode if we want to see the logs of the container we can use the following command
 
 ```bash
@@ -70,11 +119,12 @@ Aplications inside container runs in an isoated Docker network and we need to ex
 
 We shall do a port biding.
 
- To expose a port of the container to the host machine we can use the following command
+To expose a port of the container to the host machine we can use the following command
 
 ```bash
 docker run -d -p <host_port>:<container_port> <image_name>
 ```
+
 We cannot use the same port for the host machine and the container.
 
 Example: `docker run -d -p 8080:80 nginx`
@@ -86,7 +136,6 @@ docker run -d --name <container_name> -p <host_port>:<container_port> <image_nam
 ```
 
 Example: `docker run -d --name my-app -p 8080:80 nginx`
-
 
 #### Listing Containers
 
@@ -236,7 +285,6 @@ services:
       - "3000:3000"
     volumes:
       - my-volume:/app/data
-
 ```
 
 #### Running Docker Compose
@@ -274,10 +322,9 @@ Dockers registries are services that store and distribute Docker images. The mos
 
 There are private and public registries. Docker Hub is a public registry, but you can also create private repositories.
 
-Registry and repository are not the same. 
+Registry and repository are not the same.
 
 A registry is a service that stores images, and a repository is a collection of related images with the same name.
-
 
 ### Summary
 
