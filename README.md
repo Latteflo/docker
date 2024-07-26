@@ -44,8 +44,9 @@ Repository Structure:
 
 - Simple Demo : Contains a simple Node.js application and a Dockerfile to build a Docker image.
 - Python Demo: Contains a simple Python application and a Dockerfile to build a Docker image.
-- Monitoring Demo with Prometheus and Grafana: Contains a `docker-compose.yml` file to run the application with Prometheus and Grafana.
-- ElasticSearch Demo with Kibana and Logstash : Contains a `docker-compose.yml` file to run the application with ElasticSearch, Kibana and Logstash.
+- [Monitoring Demo with Prometheus and Grafana](monitoring_prometeus_grafana/dpg.md): Contains a `docker-compose.yml` file to run the application with Prometheus and Grafana.
+- [ElasticSearch Demo with Kibana and Logstash](elk_kibana_logstash/elk.md) : Contains a `docker-compose.yml` file to run the application with ElasticSearch, Kibana and Logstash.
+- [SIEM with Suricata and ELK stack](siem_project/siem.md) : Contains a `docker-compose.yml` file to run the application with Suricata and ELK stack.
 
 ---
 

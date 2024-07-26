@@ -1,6 +1,33 @@
 # ELK stack 
 
-The ELK stack is highly customizable and extensible, with a large community contributing plugins and integrations. It is widely used across industries for a variety of use cases, from IT operations to business intelligence.
+The ELK stack is highly customizable and extensible, with a large community contributing plugins and integrations. It is widely used across industries for a variety of use cases, from IT operations to business intelligence.# Components
+
+- **Suricata**: Network security monitoring engine
+- **Elasticsearch**: Search and analytics engine
+- **Logstash**: Data processing pipeline
+- **Kibana**: Data visualization dashboard
+
+## Configuration
+
+- Suricata configuration: `suricata/suricata.yaml`
+- Logstash pipeline: `logstash/pipeline/logstash.conf`
+
+## Usage
+
+1. Suricata will monitor network traffic and generate alerts based on its ruleset.
+2. Logstash will process these alerts and send them to Elasticsearch.
+3. Use Kibana to create visualizations and dashboards for the Suricata data.
+
+## Customization
+
+- Add custom Suricata rules in the `suricata/rules/` directory
+- Modify the Logstash pipeline for additional log processing
+- Create custom Kibana dashboards for specific monitoring needs
+
+## Troubleshooting
+
+- Check container logs: `docker-compose logs <service-name>`
+- Ensure all services are running: `docker-compose ps`
 
 ## ElasticSearch
 
