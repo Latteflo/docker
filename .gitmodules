@@ -1,0 +1,3 @@
+[submodule "nmap-did-what"]
+	path = nmap-did-what
+	url = https://github.com/hackertarget/nmap-did-what.git
